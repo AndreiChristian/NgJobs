@@ -7,7 +7,7 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
-      // "emerald",
+      // "forest",
       {
         mytheme: {
           primary: "#C8A2C8", // Lilac as the primary color

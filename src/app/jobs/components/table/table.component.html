@@ -1,0 +1,41 @@
+<div class="overflow-x-auto">
+  <div class="table-responsive">
+    <table class="table w-full">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Position</th>
+          <th>Company</th>
+          <th>Date Applied</th>
+          <th>Status</th>
+          <th>Source</th>
+          <th>Contact Name</th>
+          <th>Contact Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let job of jobs$ | async">
+          <td>{{ job.id }}</td>
+          <td>{{ job.position }}</td>
+          <td>{{ job.company }}</td>
+          <td>{{ job.appliedDate | date }}</td>
+          <td>{{ job.status }}</td>
+          <td>{{ job.source }}</td>
+          <td>{{ job.contactName }}</td>
+          <td>{{ job.contactEmail }}</td>
+          <td>
+            <div class="dropdown dropdown-left">
+              <div tabindex="0" class="btn btn-sm">Actions</div>
+              <ul tabindex="0"
+                class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a (click)="modifyStatus(job.id!)">Modify Status</a></li>
+                <li><a (click)="deleteJob(job.id!)">Delete</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
