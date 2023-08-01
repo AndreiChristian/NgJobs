@@ -1,0 +1,10 @@
+<main class="flex flex-col min-h-screen">
+  <app-navbar class="flex-shrink-0"></app-navbar>
+  <div class="flex-grow flex bg-gray-100 p-6">
+    <app-summary class="w-1/4 "></app-summary>
+    <div class="container mx-auto flex-grow w-3/4">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer class="flex-shrink-0"></app-footer>
+</main>

@@ -1,0 +1,53 @@
+<div class="mx-auto bg-white p-6 shadow-md rounded-xl ">
+  <h1 class="text-2xl mb-4 text-center">Job Application</h1>
+  <form #jobApplicationForm="ngForm"
+    (ngSubmit)="onSubmit(jobApplicationForm.value)">
+    <div class="form-control">
+      <label>Position:</label>
+      <input type="text" name="position" ngModel class="input input-bordered"
+        required>
+    </div>
+    <div class="form-control">
+      <label>Company:</label>
+      <input type="text" name="company" ngModel class="input input-bordered"
+        required>
+    </div>
+    <div class="form-control">
+      <label>Date Applied:</label>
+      <input type="date" name="appliedDate" ngModel class="input input-bordered"
+        required>
+    </div>
+    <div class="form-control">
+      <label>Status:</label>
+      <select name="status" ngModel class="select select-bordered" required>
+        <option value="applied">Applied</option>
+        <option value="interview">Interview</option>
+        <option value="offer">Offer</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label>Source:</label>
+      <select name="source" ngModel class="select select-bordered" required>
+        <option value="LinkedIn">LinkedIn</option>
+        <option value="Indeed">Indeed</option>
+        <option value="Company Website">Company Website</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="form-control">
+      <label>Contact Name:</label>
+      <input type="text" name="contactName" ngModel class="input input-bordered">
+    </div>
+    <div class="form-control">
+      <label>Contact Email:</label>
+      <input type="email" name="contactEmail" ngModel
+        class="input input-bordered">
+    </div>
+    <div class="form-control">
+      <label>Notes:</label>
+      <textarea name="notes" ngModel class="textarea textarea-bordered"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Submit Application</button>
+  </form>
+</div>
